@@ -1,6 +1,23 @@
 <html>
     <head>
         <title>Exam 1 Code</title>
+        <link rel="stylesheet" href="exam1.css">
     </head>
-    <h1>This is a heading</h1>
+    <body>
+        <h1>This is a heading</h1>
+        <form><input type="button" value="Change Color" onclick="changeColor()"></form>
+
+    <script>
+        function getColor(){
+            const colors = ["red", "blue", "green", "yellow", "purple", "orange", "pink"];
+            const randomIndex = Math.floor(Math.random() * colors.length);
+            return colors[randomIndex];
+        }
+
+        function changeColor(){
+            const newColor = getColor();
+            document.querySelector("h1").style.color = newColor;
+        }
+    </script>
+    </body>
 </html>
